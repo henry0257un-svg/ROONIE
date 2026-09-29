@@ -5,9 +5,9 @@
 <script src="data.js"></script><script src="common.js"></script><script>
 const q=new URLSearchParams(location.search),g=+(q.get('g')||1);
 const cfg={
-  1:{label:'MEMORY CHECK // 01',title:'第一段實體記憶',code:'M-031',img:'assets/chapter_3.png',instruction:'取得第一份實體記憶後，拍下它完成核對。建議讓大草莓熊與 M404 識別卡一起入鏡。記得保留禮物上的 MEMORY DECODER CARD。',next:'story.html?c=3'},
-  2:{label:'PAIR CHECK // 02',title:'同源副本核對',code:'M-204',img:'assets/chapter_4.png',instruction:'取得第二份實體記憶後，讓「原始記憶」與「縮小副本」同時入鏡。也就是兩隻熊要一起拍。',next:'story.html?c=4'},
-  3:{label:'FINAL MEMORY CHECK',title:'最終實體記憶',code:'M-404',img:'assets/chapter_7.png',instruction:'取得最後一份實體記憶後，請把大草莓熊、小草莓熊與相機三件物品全部放進同一張照片。',next:'final.html'}
+  1:{label:'MEMORY CHECK // 01',title:'第一段實體記憶',code:'M-031',img:'chapter_3.png',instruction:'取得第一份實體記憶後，拍下它完成核對。建議讓大草莓熊與 M404 識別卡一起入鏡。記得保留禮物上的 MEMORY DECODER CARD。',next:'story.html?c=3'},
+  2:{label:'PAIR CHECK // 02',title:'同源副本核對',code:'M-204',img:'chapter_4.png',instruction:'取得第二份實體記憶後，讓「原始記憶」與「縮小副本」同時入鏡。也就是兩隻熊要一起拍。',next:'story.html?c=4'},
+  3:{label:'FINAL MEMORY CHECK',title:'最終實體記憶',code:'M-404',img:'chapter_7.png',instruction:'取得最後一份實體記憶後，請把大草莓熊、小草莓熊與相機三件物品全部放進同一張照片。',next:'final.html'}
 }[g]||null;
 if(!cfg)location.href='index.html';
 verifyBg.src=cfg.img;verifyLabel.textContent=cfg.label;verifyTitle.textContent=cfg.title;authBox.innerHTML=`AUTHORIZATION GRANTED<br>EXTRACTION CODE .... <strong>${cfg.code}</strong>`;verifyInstruction.textContent=cfg.instruction;
