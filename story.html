@@ -12,7 +12,7 @@ function render(){
 
   // 每一幕載入自己的照片
   const sceneImage =
-    'assets/story/c'+(c+1)+'_s'+(s+1)+'.png';
+    'c'+(c+1)+'_s'+(s+1)+'.png';
 
   storyBg.onerror = ()=>{
     storyBg.onerror = null;
@@ -41,7 +41,7 @@ function render(){
     const preload = new Image();
 
     preload.src =
-      'assets/story/c'+(c+1)+'_s'+(s+2)+'.png';
+      'c'+(c+1)+'_s'+(s+2)+'.png';
   }
 }
 next.onclick=()=>{if(s<ch.scenes.length-1){s++;render();}else location.href='chapter.html?c='+c;};
