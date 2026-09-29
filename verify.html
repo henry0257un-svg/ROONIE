@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MEMORY_404｜Verification</title><link rel="stylesheet" href="style.css"></head>
-<body><div class="page"><img class="bg" id="verifyBg" src="assets/chapter_3.png" alt=""><div class="overlay"></div><div class="topbar"><div><span class="dot"></span>PHYSICAL MEMORY CHECK</div><div id="clock">--:--</div></div>
+<body><div class="page"><img class="bg" id="verifyBg" src="chapter_3.png" alt=""><div class="overlay"></div><div class="topbar"><div><span class="dot"></span>PHYSICAL MEMORY CHECK</div><div id="clock">--:--</div></div>
 <div class="puzzle-wrap"><div class="puzzle-card"><div class="eyebrow" id="verifyLabel"></div><h2 id="verifyTitle"></h2><div class="terminal" id="authBox"></div><div class="clue" id="verifyInstruction"></div><p class="small">請把上方授權碼出示給「記憶保管員」，取得對應的實體記憶。不要翻保管員的袋子。</p><label class="btn camera-btn" for="photoInput">啟動相機進行核對</label><input id="photoInput" class="camera-input" type="file" accept="image/*" capture="environment"><div id="previewWrap" class="photo-preview" style="display:none"><img id="preview" alt="核對照片"></div><div class="msg" id="verifyMsg"></div><button class="btn" id="scanBtn" disabled>開始影像核對</button><button class="btn" id="continueBtn" style="display:none">核對完成｜繼續</button></div></div></div>
 <script src="data.js"></script><script src="common.js"></script><script>
 const q=new URLSearchParams(location.search),g=+(q.get('g')||1);
