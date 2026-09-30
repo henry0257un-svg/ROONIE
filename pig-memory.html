@@ -82,10 +82,10 @@ ring3D(0,-.52,1.25,1.05,.66,30,'cheek');
 
 const memories=[
 {id:'earL',label:'NODE 01',pos:{x:-1.18,y:1.62,z:.30},title:'起點',image:'IMG_0072.JPG',text:'當知曉妳的人生種種妳便成為了我一直追尋的目標，雖然在我的領域並不是像妳一樣是個佼佼者，但妳為我點燃了挑戰自我極限的動力，我將用妳傳遞給我的那道光照亮我未知的未來...'},
-{id:'earR',label:'NODE 02',pos:{x:1.18,y:1.62,z:.30},title:'第一次異常',image:'IMG_0100.JPG',text:'路痴系統異常 <異常來源>:王泥泥 <異常事件>:「學姐我改怎麼稱呼妳?」「叫我肉泥就好!」'},
+{id:'earR',label:'NODE 02',pos:{x:1.18,y:1.62,z:.30},title:'第一次異常',image:'IMG_0100.JPG',text:'路痴系統異常 <異常來源>:王泥泥 <異常事件>:「學姐我該怎麼稱呼妳?」「叫我肉泥就好!」'},
 {id:'eyeL',label:'NODE 03',pos:{x:-.52,y:.27,z:1.48},title:'被保存的畫面',image:'IMG_3012.jpeg',text:'偷偷許個遙不可及的夢想，若未來我真成了一個大導演，要找妳當我的配樂及配音師'},
-{id:'eyeR',label:'NODE 04',pos:{x:.52,y:.27,z:1.48},title:'沒有時間戳的記憶',image:'IMG_3548.jpeg',text:'發現了嗎?是妳發著光照亮了前方，勇敢的面對一切，而我將在背後注視著妳支持著妳，我隨時隨地都能好好地接住妳...'},
-{id:'snout',label:'NODE 05',pos:{x:0,y:-.26,z:1.98},title:'最後的檔案',image:'IMG_4845.jpeg',text:'是妳教會我如何表達感受如何表達愛。「首先是妳再來才是別人」妳的話依舊那麼有重量，謝謝你我的老師，我愛你我的愛人...'}];
+{id:'eyeR',label:'NODE 04',pos:{x:.52,y:.27,z:1.48},title:'沒有時間戳的記憶',image:'IMG_3548.jpeg',text:'發現了嗎? 是妳發著光照亮了前方，勇敢的面對一切，而我將在背後注視著妳支持著妳，隨時隨地都能好好地接住妳...'},
+{id:'snout',label:'NODE 05',pos:{x:0,y:-.26,z:1.98},title:'最後的檔案',image:'IMG_4845.jpeg',text:'是妳教會我如何表達感受，如何表達愛。「首先是妳再來才是別人」妳的話依舊那麼有重量，謝謝你我的老師，我愛你我的愛人...'}];
 let rotX=-.04,rotY=.10,targetRotX=rotX,targetRotY=rotY,dragging=false,lastX=0,lastY=0,startX=0,startY=0,auto=true,hovered=null;
 const opened=new Set(JSON.parse(localStorage.getItem('pigArchiveOpened')||'[]'));function updateOpened(){readCount.textContent=`${opened.size} / ${memories.length}`;if(opened.size>=memories.length)doneBadge.classList.add('show');localStorage.setItem('pigArchiveOpened',JSON.stringify([...opened]))}updateOpened();
 function rotate3(p){let x=p.x*Math.cos(rotY)+p.z*Math.sin(rotY),z=-p.x*Math.sin(rotY)+p.z*Math.cos(rotY),y=p.y*Math.cos(rotX)-z*Math.sin(rotX),z2=p.y*Math.sin(rotX)+z*Math.cos(rotX);return{x,y,z:z2}}
