@@ -67,7 +67,7 @@ function renderTimeline(){
 }
 
 function renderFrequency(){
-  game.innerHTML=`<div class="clue"><strong>訊號校正</strong><br>系統名稱就是參考頻率。拖動滑桿，讓雜訊完全消失。</div><div class="signal-box"><div class="signal-noise" id="signalNoise">X#%M?E!M_?0?4 /// DATA LOST</div><div class="signal-secret" id="signalSecret">A1Z26</div></div><input class="range" id="freq" type="range" min="350" max="460" value="370"><div class="range-readout" id="freqStatus">SIGNAL：LOST</div><button class="btn" id="lockFreq" disabled>鎖定頻率</button>`;
+  game.innerHTML=`<div class="clue"><strong>訊號校正</strong><br>系統名稱就是參考頻率。拖動滑桿，讓雜訊完全消失。</div><div class="signal-box"><div class="signal-noise" id="signalNoise">X#%M?E!M_?0?4 /// DATA LOST</div><div class="signal-secret" id="signalSecret">A1-Z26</div></div><input class="range" id="freq" type="range" min="350" max="460" value="370"><div class="range-readout" id="freqStatus">SIGNAL：LOST</div><button class="btn" id="lockFreq" disabled>鎖定頻率</button>`;
   const slider=document.getElementById('freq'), noise=document.getElementById('signalNoise'), secret=document.getElementById('signalSecret'), status=document.getElementById('freqStatus'), lock=document.getElementById('lockFreq');
   function update(){const v=+slider.value,d=Math.abs(v-404);noise.style.opacity=Math.min(1,d/35);noise.style.filter=`blur(${Math.min(5,d/10)}px)`;secret.style.opacity=d<18?1-d/18:0;if(d<=2){status.textContent='SIGNAL：LOCKED';lock.disabled=false;}else if(d<12){status.textContent='SIGNAL：VERY CLOSE';lock.disabled=true;}else if(v<404){status.textContent='SIGNAL：LOW';lock.disabled=true;}else{status.textContent='SIGNAL：HIGH';lock.disabled=true;}}
   slider.oninput=update;update();
@@ -80,7 +80,7 @@ function renderFinal(){
   function stat(v,lo,hi,lowTxt,highTxt){v=+v;return v<lo?lowTxt:v>hi?highTxt:'LOCKED';}
   function update(){const fs=stat(f.value,68,84,'LOST','OVER'),es=stat(e.value,55,70,'LOW','HIGH'),gs=stat(g.value,20,36,'LOW','HIGH');focusStatus.textContent=fs;expStatus.textContent=es;grainStatus.textContent=gs;img.style.filter=`blur(${Math.max(0,(75-f.value)/14)}px) brightness(${0.55+(+e.value/100)})`;layer.style.opacity=(+g.value/100)*0.75;if(fs==='LOCKED'&&es==='LOCKED'&&gs==='LOCKED')document.getElementById('finalDecode').style.display='block';}
   [f,e,g].forEach(x=>x.oninput=update);update();
-  decoderMode.textContent=localStorage.getItem('memory404_decoder')||'A1Z26';
+  decoderMode.textContent=localStorage.getItem('memory404_decoder')||'A1-Z26';
   wordSubmit.onclick=()=>{const v=wordAnswer.value;if(!matches(v,['CAMERA','相機'])){errMsg('解碼結果不正確。A=01、B=02、C=03……');return;}okMsg('✓ 最後物件名稱已確認');keyStage.style.display='block';};
   keySubmit.onclick=()=>{
   const v=keyAnswer.value.trim();
