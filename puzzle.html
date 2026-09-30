@@ -71,7 +71,7 @@ function renderFrequency(){
   const slider=document.getElementById('freq'), noise=document.getElementById('signalNoise'), secret=document.getElementById('signalSecret'), status=document.getElementById('freqStatus'), lock=document.getElementById('lockFreq');
   function update(){const v=+slider.value,d=Math.abs(v-404);noise.style.opacity=Math.min(1,d/35);noise.style.filter=`blur(${Math.min(5,d/10)}px)`;secret.style.opacity=d<18?1-d/18:0;if(d<=2){status.textContent='SIGNAL：LOCKED';lock.disabled=false;}else if(d<12){status.textContent='SIGNAL：VERY CLOSE';lock.disabled=true;}else if(v<404){status.textContent='SIGNAL：LOW';lock.disabled=true;}else{status.textContent='SIGNAL：HIGH';lock.disabled=true;}}
   slider.oninput=update;update();
-  lock.onclick=()=>{localStorage.setItem('memory404_decoder','A1Z26');okMsg('✓ 解碼模式已恢復：A1Z26（A=01、B=02、C=03…）');lock.textContent='儲存並繼續';lock.disabled=false;lock.onclick=nextChapter;};
+  lock.onclick=()=>{localStorage.setItem('memory404_decoder','A1-Z26');okMsg('✓ 解碼模式已恢復：A1-Z26（A=01、B=02、C=03…）');lock.textContent='儲存並繼續';lock.disabled=false;lock.onclick=nextChapter;};
 }
 
 function renderFinal(){
