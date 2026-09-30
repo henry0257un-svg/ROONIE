@@ -41,7 +41,15 @@ p{line-height:1.9;margin:0 0 14px}
 .btn{width:100%;padding:16px 17px;border-radius:16px;border:0;cursor:pointer;background:var(--accent);color:#fff;font-size:16px;font-weight:800;margin-top:10px}
 .btn.secondary{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.12)}
 .btn.ghost{background:transparent;border:1px dashed rgba(255,255,255,.28);color:#ffe8ef}
-.terminal{padding:16px;margin:16px 0;background:rgba(7,8,12,.5);border:1px solid rgba(255,255,255,.08);border-radius:16px;color:#e4e6ef;font:13px/1.8 ui-monospace,monospace}
+.terminal{
+  padding:16px;
+  margin:16px 0;
+  background:rgba(7,8,12,.5);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:16px;
+  color:rgba(255,98,138,.80);
+  font:13px/1.8 ui-monospace,monospace;
+}
 .line{width:54px;height:2px;background:var(--accent);margin:20px 0}
 .chapter-wrap{position:relative;z-index:5;min-height:calc(100vh - 44px);display:grid;place-items:center;text-align:center;padding:40px 24px}
 .chapter-card{width:min(100%,560px);background:rgba(10,11,16,.38);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.1);border-radius:28px;padding:38px 24px}
