@@ -13,8 +13,8 @@ window.CHAPTERS = [
     num:"CHAPTER 02", title:"螢幕外的證據", sub:"如果它只是一個網站，現實裡為什麼會留下識別碼？", progress:20, image:"chapter_2.png",
     scenes:[
       {eyebrow:"MEMORY // PARTIALLY RESTORED", line:"雜訊短暫消失了。", sub:"系統找到一段實體識別資料，但內容只剩四個字元。"},
-      {eyebrow:"TRACE // PHYSICAL", line:"第一個痕跡不是禮物。", sub:"它只是證明 MEMORY_404 並不只存在於螢幕裡。"},
-      {eyebrow:"TRACE // WARNING", line:"「請妥善保管這張識別卡。」", sub:"它將成為下一段記憶的驗證依據。"}
+      {eyebrow:"TRACE // PHYSICAL", line:"第一個痕跡的存在證明。", sub:"它只是證明 MEMORY_404 並不只存在於螢幕裡。"},
+      {eyebrow:"TRACE // WARNING", line:"「還記得那張識別卡嗎?」", sub:"它將成為下一段記憶的驗證依據。"}
     ],
     puzzle:{type:"basic", label:"PUZZLE 02 // PHYSICAL TRACE", title:"輸入識別碼", terminal:"PHYSICAL TRACE ........ DETECTED<br>FILE NAME ............. MEMORY_404<br>OBJECT TYPE ........... ID CARD", clue:"輸入妳取得的 MEMORY_404 識別碼。", answers:["M404","MEMORY404"], hint:"提示：如果妳手上有一張 MEMORY_404 小卡，答案就在上面。", placeholder:"輸入識別碼"}
   },
